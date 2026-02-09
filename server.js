@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-const version = '1';
+const version = '3';
 
 app.get('/', (req, res) => {
   res.json({ version: version });
