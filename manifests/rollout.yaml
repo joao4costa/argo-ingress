@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: argo-ingress
-          image: "argo-ingress:6"
+          image: "argo-ingress:7"
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
