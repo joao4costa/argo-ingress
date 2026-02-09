@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: argo-ingress
-          image: "argo-ingress:3" 
+          image: "argo-ingress:latest"
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
@@ -36,12 +36,12 @@ spec:
             initialDelaySeconds: 5
             periodSeconds: 10
   strategy:
-    canary: # Mudou de 'ingress' para 'canary'
+    canary:
       stableService: argo-ingress-stable
       canaryService: argo-ingress-canary
       trafficRouting:
         nginx:
-          stableIngress: argo-ingress-main # Nome do Ingress que criamos acima
+          stableIngress: argo-ingress-main
       steps:
         - setWeight: 25
         - pause: {}

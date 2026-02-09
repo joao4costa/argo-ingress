@@ -6,7 +6,7 @@ metadata:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-  - host: argo-ingress.local # Nome que você usará no /etc/hosts
+  - host: argo-ingress.local
     http:
       paths:
       - path: /
